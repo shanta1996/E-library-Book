@@ -7,6 +7,7 @@ const Mydata = () => {
     useEffect(()=>{
       const fetching=async ()=>{
         const {data}=await axios.get("https://fakestoreapi.com/products")
+        
         setfirst(data)
   
       }
