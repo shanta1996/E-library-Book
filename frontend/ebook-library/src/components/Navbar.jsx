@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
   return (
     <>
-      <nav className='bg-slate p-6 '>
-        <ul className='flex items-center justify-evenly gap-[50px]'>
+      <nav className='bg-slate p-6 w-[100%] md:block hidden'>
+        <ul className='flex items-center justify-evenly w-[100%]'>
           <Link to="" className='flex gap-[10px] font-semibold text-[35px] 2xl:text-[40px]  '>
             <img className='h-[50px]' src="/logo.png" alt="logo" />
             <Link to="/">READBLOOM</Link>
