@@ -13,7 +13,7 @@ const router = createBrowserRouter(
       <Route path='/' element={<Layouts />}>
         <Route index element={<HomePage />} />
         <Route path='kidsbook' element={<KidsBookContainer/>}/>
-        <Route path='kidsbook/:id' element={<KidsDetail/>}/>
+        <Route path='kidsbook/:kidsbookID' element={<KidsDetail/>}/>
       </Route>
     </>
   )

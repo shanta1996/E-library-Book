@@ -13,6 +13,13 @@ from rest_framework.authtoken.models import Token
 class KidsBookList(generics.ListCreateAPIView):
     queryset=KidsBook.objects.all()
     serializer_class=KidsBookSerializer
+    # lookup_field='id'
+
+
+# class KidsBookSingelList(generics.ListCreateAPIView):
+#     queryset=KidsBook.objects.all()
+#     serializer_class=KidsBookSerializer
+#     lookup_field='id'
 
 class KidsBookUpdateDelete(generics.RetrieveUpdateDestroyAPIView):
     queryset=KidsBook.objects.all()
