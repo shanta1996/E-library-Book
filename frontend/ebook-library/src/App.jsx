@@ -2,8 +2,8 @@ import React from 'react'
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom';
 import Layouts from './layouts/Layouts';
 import HomePage from './Pages/HomePage';
-import KidsBookContainer from './components/kidsbook/KidsBookContainer';
-import KidsDetail from './components/kidsbook/KidsDetail';
+import EbookContainer from './components/ebook/EbookContainer';
+import EbookDetails from './components/ebook/EbookDetails';
 
 
 
@@ -12,8 +12,8 @@ const router = createBrowserRouter(
     <>
       <Route path='/' element={<Layouts />}>
         <Route index element={<HomePage />} />
-        <Route path='kidsbook' element={<KidsBookContainer/>}/>
-        <Route path='kidsbook/:kidsbookID' element={<KidsDetail/>}/>
+        <Route path='ebook' element={<EbookContainer/>}/>
+        <Route path='ebook/:ebookID' element={<EbookDetails/>}/>
       </Route>
     </>
   )

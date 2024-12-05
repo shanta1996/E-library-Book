@@ -1,5 +1,5 @@
 import FrontHome from '../components/FrontHome'
-import KidsBookContainer from '../components/kidsbook/KidsBookContainer'
+import EbookContainer from '../components/ebook/EbookContainer'
 // import Slider from "react-slick";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
@@ -19,7 +19,7 @@ const HomePage = () => {
   return (
     <>
       <FrontHome />
-      <KidsBookContainer />
+      <EbookContainer />
     </>
   )
 }

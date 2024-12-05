@@ -1,13 +1,13 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import KidsBook from './KidsBook'
+import Ebook from './Ebook'
 // import Slider from 'react-slick'
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 // import '../../App.css'
 
 
-const KidsBookContainer = () => {
+const EbookContainer = () => {
   // let settings = {
   //   slidesToShow: 4,
   //   slidesToScroll: 4,
@@ -57,12 +57,12 @@ const KidsBookContainer = () => {
 
 
 
-  const [kidBooks, setKidsBooks] = useState([])
+  const [eBooks, setEBooks] = useState([])
   const [limit, setLimit] = useState(4)
   useEffect(() => {
     const fetchKidbook = async () => {
-      const { data } = await axios.get("http://127.0.0.1:8000/api/kidsbooks/")
-      setKidsBooks(data)
+      const { data } = await axios.get("http://127.0.0.1:8000/api/classicbook/")
+      setEBooks(data)
     }
     fetchKidbook()
   }, [])
@@ -95,7 +95,7 @@ const KidsBookContainer = () => {
             className='h-[80%] md:h-[100%] px-[20px] sm:px-[55px] md:px-[55px] lg:px-[20px] xl:px-[120px] 2xl:px-[35px] bg-red-700'
           >
 
-            {kidBooks.map((books, i) => {
+            {eBooks.map((books, i) => {
               return (
                 <KidsBook key={i} kidsbook={books} />
               )
@@ -111,9 +111,9 @@ const KidsBookContainer = () => {
 
         <h2 className='text-center p-5 text-[30px] font-semibold  w-full'>KIDS BOOK</h2>
         <div className=' w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  xl:grid-cols-4 justify-items-center px-[100px] '>
-          {kidBooks && kidBooks.slice(0, limit).map((books, i) => {
+          {eBooks && eBooks.slice(0, limit).map((books, i) => {
             return (
-              <KidsBook key={i} kidsbook={books} />
+              <Ebook key={i} eBooks={books} />
             )
           })}
         </div>
@@ -128,4 +128,4 @@ const KidsBookContainer = () => {
   )
 }
 
-export default KidsBookContainer
+export default EbookContainer
