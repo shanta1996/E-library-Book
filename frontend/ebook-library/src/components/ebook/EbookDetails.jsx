@@ -10,7 +10,7 @@ const EbookDetails = () => {
   const e_bookid = params.ebookID
   useEffect(() => {
     const fetcheBooks = async () => {
-      const { data } = await axios.get(`http://127.0.0.1:8000/api/classicbook/${e_bookid}`)
+      const { data } = await axios.get(`http://127.0.0.1:8000/api/ebooks/${e_bookid}`)
       setEBooks(data)
     }
     fetcheBooks()

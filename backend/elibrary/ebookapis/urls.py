@@ -3,7 +3,7 @@ from .views import *
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
-router.register(r'classicbook', EBooksList, basename='classicbook')
+router.register(r'ebooks', EBooksList, basename='ebooks')
 urlpatterns = router.urls
 
 urlpatterns = [

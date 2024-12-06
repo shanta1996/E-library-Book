@@ -61,7 +61,7 @@ const EbookContainer = () => {
   const [limit, setLimit] = useState(4)
   useEffect(() => {
     const fetchKidbook = async () => {
-      const { data } = await axios.get("http://127.0.0.1:8000/api/classicbook/")
+      const { data } = await axios.get("http://127.0.0.1:8000/api/ebooks/")
       setEBooks(data)
     }
     fetchKidbook()

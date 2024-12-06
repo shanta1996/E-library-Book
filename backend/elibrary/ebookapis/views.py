@@ -5,6 +5,7 @@ from rest_framework import generics
 from rest_framework import viewsets
 from .models import *
 from .serializers import *
+from rest_framework.filters import SearchFilter
 from rest_framework.authtoken.models import Token
 
 # Create your views here.
@@ -12,6 +13,18 @@ from rest_framework.authtoken.models import Token
 class EBooksList(viewsets.ModelViewSet):
     queryset=EBook.objects.all()
     serializer_class=EBooksListSerializer
+    filter_backends = [SearchFilter]
+    search_fields=['^book_name']
+
+    # def list(self,request):
+    #     search=request.GET.get('search')
+    #     queryset=self.queryset
+    #     if search:
+    #         queryset=queryset.filter(book_name__startswith=search)
+    #     serializer=EBooksListSerializer(queryset,many=True)
+    #     return Response(serializer.data)
+
+
 
 # class KidsBookList(generics.ListCreateAPIView):
 #     queryset=KidsBook.objects.all()
