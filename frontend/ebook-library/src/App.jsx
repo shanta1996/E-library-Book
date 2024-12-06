@@ -4,6 +4,7 @@ import Layouts from './layouts/Layouts';
 import HomePage from './Pages/HomePage';
 import EbookContainer from './components/ebook/EbookContainer';
 import EbookDetails from './components/ebook/EbookDetails';
+// import SearchBook from './components/SearchBook';
 
 
 
@@ -14,6 +15,7 @@ const router = createBrowserRouter(
         <Route index element={<HomePage />} />
         <Route path='ebook' element={<EbookContainer/>}/>
         <Route path='ebook/:ebookID' element={<EbookDetails/>}/>
+        {/* <Route path='search/:searchID' element={<SearchBook/>}/> */}
       </Route>
     </>
   )

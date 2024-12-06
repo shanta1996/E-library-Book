@@ -60,11 +60,11 @@ const EbookContainer = () => {
   const [eBooks, setEBooks] = useState([])
   const [limit, setLimit] = useState(4)
   useEffect(() => {
-    const fetchKidbook = async () => {
+    const fetchEbook = async () => {
       const { data } = await axios.get("http://127.0.0.1:8000/api/ebooks/")
       setEBooks(data)
     }
-    fetchKidbook()
+    fetchEbook()
   }, [])
 
   const loadMore = () => {
@@ -109,11 +109,11 @@ const EbookContainer = () => {
 
       <div className='bg-slate mt-[100px] w-full pb-[90px] overflow-hidden'>
 
-        <h2 className='text-center p-5 text-[30px] font-semibold  w-full'>KIDS BOOK</h2>
+        <h2 className='text-center p-5 text-[30px] font-semibold  w-full'>E-BOOKS</h2>
         <div className=' w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  xl:grid-cols-4 justify-items-center px-[100px] '>
           {eBooks && eBooks.slice(0, limit).map((books, i) => {
             return (
-              <Ebook key={i} eBooks={books} />
+              <Ebook key={i} eBook={books} />
             )
           })}
         </div>

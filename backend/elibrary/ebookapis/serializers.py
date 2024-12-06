@@ -2,10 +2,22 @@ from rest_framework import serializers
 from .models import *
 
 
-class EBooksListSerializer(serializers.ModelSerializer):
+class EbookSerializer(serializers.ModelSerializer):
     class Meta:
         model=EBook
-        fields='__all__'
+        # fields='__all__'
+        exclude=['image']
+
+
+
+
+
+
+
+# class EBooksListSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model=EBook
+#         fields='__all__'
 
 
 

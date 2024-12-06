@@ -18,6 +18,7 @@ const HomePage = () => {
 
   return (
     <>
+
       <FrontHome />
       <EbookContainer />
     </>
