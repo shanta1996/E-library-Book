@@ -1,18 +1,17 @@
 from django.urls import path,include
 from .views import *
-# from rest_framework.routers import DefaultRouter
+from rest_framework.routers import DefaultRouter
 
-# router = DefaultRouter()
-# router.register(r'ebooks', EBooksList, basename='ebooks')
-# urlpatterns = router.urls
+router = DefaultRouter()
+router.register(r'ebooks', EBooksList, basename='ebooks')
+urlpatterns = router.urls
 
 urlpatterns = [
-    path('ebooks/',EbookList.as_view()),
+    path('signup/',signup),
+    path('login/',login),
 
 
-
-
-
+    # path('ebooks/',EbookList.as_view()),
     # path('kidsbooks/',KidsBookList.as_view()),
     # path('kidsbooks/<int:pk>',KidsBookList.as_view()),
     # path('kidsbookupdatedelete/<id>',KidsBookUpdateDelete.as_view()),
@@ -26,5 +25,5 @@ urlpatterns = [
     # path('thrillersbookupdatedelete/<id>/',ThrillersBookUdpdateDelete.as_view()),
     # path('adventurebook/',AdventureFictionList.as_view()),
     # path('adventurebookupdatedelete/<id>/',AdventureFictionUpdateDelete.as_view()),
-    # path('',include(router.urls))
+    path('',include(router.urls))
 ]
