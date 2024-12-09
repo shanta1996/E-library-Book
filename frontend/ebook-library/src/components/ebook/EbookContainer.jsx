@@ -107,10 +107,10 @@ const EbookContainer = () => {
       </div> */}
 
 
-      <div className='bg-slate mt-[100px] w-full pb-[90px] overflow-hidden'>
+      <div className='bg-slate mt-[250px] md:mt-[100px] w-full pb-[90px] overflow-hidden'>
 
-        <h2 className='text-center p-5 text-[30px] font-semibold  w-full'>E-BOOKS</h2>
-        <div className=' w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  xl:grid-cols-4 justify-items-center px-[100px] '>
+        <h2 className='text-center p-3 md:p-5 text-[30px] font-semibold  w-full'>E-BOOKS</h2>
+        <div className=' w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  xl:grid-cols-4 justify-items-center px-[40px] md:px-[100px] '>
           {eBooks && eBooks.slice(0, limit).map((books, i) => {
             return (
               <Ebook key={i} ebook={books} />
