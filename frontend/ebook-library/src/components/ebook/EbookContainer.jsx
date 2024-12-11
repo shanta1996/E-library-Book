@@ -73,17 +73,6 @@ const EbookContainer = () => {
   const loadLess = () => {
     setLimit(limit - 4)
   }
-  // const more = document.querySelector("#more")
-  // const less = document.querySelector("#less")
-  // if (more) {
-  //   more.addEventListener('click', () => {
-  //     less.style.display = 'block'
-  //     console.log('hello')
-  //   })
-  // }
-  // else {
-  //   console.log('error accured.')
-  // }
 
   return (
     <>
